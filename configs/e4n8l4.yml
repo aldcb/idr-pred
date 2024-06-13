@@ -1,0 +1,38 @@
+# Model
+model_name: e4n8l4
+model:
+  embedding_dim: 4
+  hidden_size: 8
+  num_layers: 4
+  dropout: 0.4
+
+# Dataset
+data_file: swiss-prot.nfq
+train_ratio: 0.7
+val_ratio: 0.2
+test_ratio: 0.1
+
+# Criterion
+criterion_name: MSELoss
+
+# DataLoader
+dataloader:
+  batch_size: 16
+
+# Optimizer
+optimizer_name: Adam
+optimizer:
+  lr: 0.001
+
+# Additional settings
+epochs: 40
+patience: 4
+seed: 0
+
+# Used for evaluation
+class_thresholds:
+  - 0.5
+  - 0.7
+subset_thresholds:
+  - 150
+  - 750
